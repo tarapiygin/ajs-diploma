@@ -27,7 +27,7 @@ const goodStateService = {
   save: jest.fn(),
   saveRecord: jest.fn(),
   loadRecord: () => 100,
-  load: () => JSON.parse('{"board":{},"level":1,"userStep":true,"selectedCharacterIndex":-1,"points":0,"boardEntries":[[8,{"character":{"private":{"type":"swordsman","level":1,"attack":40,"defence":10,"health":100,"attackRadius":1,"moveRadius":1},"attackRadius":1,"moveRadius":4},"position":8}],[30,{"character":{"private":{"type":"daemon","level":1,"attack":10,"defence":40,"health":100,"attackRadius":1,"moveRadius":1},"attackRadius":4,"moveRadius":1},"position":30}],[16,{"character":{"private":{"type":"vampire","level":1,"attack":40,"defence":10,"health":100,"attackRadius":1,"moveRadius":1},"attackRadius":2,"moveRadius":2},"position":16}],[34,{"character":{"private":{"type":"bowman","level":1,"attack":25,"defence":25,"health":99,"attackRadius":1,"moveRadius":1},"attackRadius":2,"moveRadius":2},"position":34}]]}'),
+  load: () => JSON.parse('{"board": {},"level": 1,"userStep": true,"selectedCharacterIndex": -1,"points": 0,"boardEntries": [[8,{"character": {"_type": "swordsman","_level": 1,"attack": 40,"defence": 10,"health": 100,"attackRadius": 1,"moveRadius": 4},"position": 8}],[30,{"character": {"_type": "daemon","_level": 1,"attack": 10,"defence": 40,"health": 100,"attackRadius": 4,"moveRadius": 1},"position": 30}],[16,{"character": {"_type": "vampire","_level": 1,"attack": 40,"defence": 10,"health": 100,"attackRadius": 2,"moveRadius": 2},"position": 16}],[34,{"character": {"_type": "bowman","_level": 1,"attack": 25,"defence": 25,"health": 99,"attackRadius": 2,"moveRadius": 2},"position": 34}]]}'),
 };
 
 const badStateService1 = {

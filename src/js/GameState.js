@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import Bowman from './Characters/Bowman';
 import Swordsman from './Characters/Swordsman';
 import Magician from './Characters/Magician';
@@ -27,7 +28,7 @@ export default class GameState {
     if (object.boardEntries) {
       for (const entry of object.boardEntries) {
         let Type;
-        switch (entry[1].character.private.type) {
+        switch (entry[1].character._type) {
           case 'bowman': Type = Bowman; break;
           case 'swordsman': Type = Swordsman; break;
           case 'magician': Type = Magician; break;
@@ -37,12 +38,12 @@ export default class GameState {
           default: throw new Error('Wrong character type');
         }
         const character = new Type();
-        character.private.attack = entry[1].character.private.attack;
-        character.private.defence = entry[1].character.private.defence;
-        character.private.health = entry[1].character.private.health;
-        character.private.attackRadius = entry[1].character.private.attackRadius;
-        character.private.moveRadius = entry[1].character.private.moveRadius;
-        character.private.level = entry[1].character.private.level;
+        character.attack = entry[1].character.attack;
+        character.defence = entry[1].character.defence;
+        character.health = entry[1].character.health;
+        character.attackRadius = entry[1].character.attackRadius;
+        character.moveRadius = entry[1].character.moveRadius;
+        character._level = entry[1].character._level;
 
         gameState.board.set(
           entry[0],
