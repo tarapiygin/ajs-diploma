@@ -41,8 +41,8 @@ export default class Character {
       throw new Error("Can't level up dead character");
     }
     this._level += 1;
-    this.attack = Math.max(this.attack, this.attack * (1.8 + this.health / 100));
-    this.defence = Math.max(this.defence, this.defence * (1.8 + this.health / 100));
+    this.attack = Math.max(this.attack, this.attack + ((this.health / 10) - 1.8));
+    this.defence = Math.max(this.defence, this.defence + ((this.health / 10) - 1.8));
     this.health += 80;
     if (this.health > 100) this.health = 100;
   }
